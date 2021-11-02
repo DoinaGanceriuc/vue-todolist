@@ -17,6 +17,7 @@
                 <div class="logo">
                     <img width="250" :src="logoImage" alt="">
                 </div>
+                <!-- /.logo -->
                 <div class="addItems">
                     <input type="text" placeholder="Nuovo todo"
                         v-model="newItem"
@@ -24,10 +25,9 @@
                     <button class="btn_add" @click="addItem">Aggiungi</button>
                     <div class="error" v-show="error">Devi scrivere qualcosa</div>
                 </div>
+                <!-- /.addItems -->
                 <div class="list">
-
                     <div class="container_items">
-
                         <div class="items" v-if="items.length> 0">
                             <h4>Todo List</h4>
 
@@ -52,16 +52,17 @@
                             <p>Niente altro da fare</p>
                         </div>
                     </div>
+                    <!-- /.container_items -->
                     <div class="completed">
                         <h4>Completed</h4>
                         <div class="single_completed_item" v-for="(itemComplete,
                             index) in
                             listCompletedItems">
-
                             <p>{{itemComplete}}</p>
                             <i class="fas fa-undo" @click="backItems(index)"></i>
                         </div>
                     </div>
+                    <!-- /.completed -->
                     <div class="trashed">
                         <div class="delete">
                             <h4>Trashed</h4>
@@ -77,8 +78,11 @@
                                 @click="backDeletedItems(index)"></i>
                         </div>
                     </div>
+                    <!-- /.trashed -->
                 </div>
+                <!-- /.list -->
             </div>
+            <!-- /.container -->
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="./Assets/Js/main.js"></script>

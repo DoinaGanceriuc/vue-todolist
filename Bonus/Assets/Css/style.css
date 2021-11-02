@@ -9,7 +9,13 @@
   width: 700px;
   margin: 5rem auto;
 }
+/* Logo */
 .logo {
+  text-align: center;
+}
+/* Add Items */
+.addItems {
+  padding: 1.5rem 2rem;
   text-align: center;
 }
 input,
@@ -24,14 +30,15 @@ input {
 .error {
   padding-top: 0.5rem;
 }
+/* List*/
 .list {
   display: flex;
   justify-content: center;
 }
-
-.addItems {
-  padding: 1.5rem 2rem;
-  text-align: center;
+.items {
+  background-color: #f5f7f7;
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 .item {
   display: flex;
@@ -39,23 +46,17 @@ input {
   line-height: 2rem;
   border-bottom: 1px solid #dadee1;
 }
-
-.items {
-  background-color: #f5f7f7;
-  padding: 2rem;
-  border-radius: 0.5rem;
-}
-h4 {
-  padding-bottom: 1rem;
-}
 .icons {
   margin-left: 2rem;
 }
-
 i {
   padding: 0 0.5rem;
 }
 
+/* Completed/Trashed */
+h4 {
+  padding-bottom: 1rem;
+}
 .completed,
 .trashed {
   background-color: #f5f7f7;
