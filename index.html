@@ -35,10 +35,12 @@
                                 @click="completedItems(index)"></i>
                             <i class="fas fa-times" @click="removeItem(index)"></i>
                         </div>
+                        <!-- <div class="completed" v-show="completed">
+                            <p>Item completato</p>
+                        </div> -->
                     </div>
-                    <div class="completed" v-show="completed">
-                        <p>Item completato</p>
-                    </div>
+
+
 
                 </div>
                 <div class="items" v-else>

@@ -30,23 +30,24 @@ const app = new Vue ({
       "Fare la spesa",
       "Fare il bucato"
     ],
-    error: false,
-    completed: false
+    error: false
+   
   },
   methods: {
     removeItem(i) {
       console.log("cliccato sulla x");
       this.items.splice(i, 1)
-      this.completed = false
+      //this.completed = false
     },
     completedItems(i) {
       console.log("cliccato sul check");
-      this.items.splice(i, 1);
-      this.completed = true
+      this.items.splice(i, 1, "Item completato");
       
-      if(this.items.length == 0) {
+      
+      /* if(this.items.length == 0) {
         this.completed = false
-      }
+        
+      } */
     },
     addItem() {
       console.log("cliccato su aggiungi");
@@ -58,7 +59,7 @@ const app = new Vue ({
             }
             
             this.newItem = ""
-            this.completed = false
+           // this.completed = false
     }
 
 
