@@ -23,7 +23,7 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
 const app = new Vue ({
   el: "#root",
   data: {
-    
+    newItem: "",
     items: [
       "Fare i compiti",
       "Fare la spesa",
@@ -40,7 +40,11 @@ const app = new Vue ({
       this.items.splice(i, 1)
 
     },
-   
+    addItem() {
+      console.log("cliccato su aggiungi");
+      this.items.push(this.newItem)
+    }
+
 
   }
 })

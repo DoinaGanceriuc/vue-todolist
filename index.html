@@ -13,6 +13,10 @@
     </head>
     <body>
         <div id="root">
+            <div class="addItems">
+                <input type="text" placeholder="Nuovo todo" v-model="newItem">
+                <button class="btn_add" @click="addItem">Aggiungi</button>
+            </div>
 
 
             <div class="items">
