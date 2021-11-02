@@ -53,13 +53,19 @@ const app = new Vue ({
       if(this.newItem.length > 5) {
                 this.items.push(this.newItem)
                 this.error = false;
+                this.modify = false
             } else {
                 this.error = true;
             }
             
             this.newItem = ""
            // this.completed = false
+    },
+    modifyItem(i) {
+      this.items.pop(i)
+      this.modify = true
     }
+
 
   }
 })

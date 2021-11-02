@@ -1,0 +1,43 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  margin: 5rem auto;
+}
+.logo {
+  text-align: center;
+}
+input,
+.btn_add {
+  border: 1px solid #212121;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.addItems,
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addItems {
+  padding: 1.5rem 2rem;
+}
+.item {
+  line-height: 2rem;
+  border-bottom: 1px solid #dadee1;
+}
+
+.items {
+  background-color: #f5f7f7;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+i {
+  padding: 0.5rem;
+}
