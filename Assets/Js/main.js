@@ -23,6 +23,7 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
 const app = new Vue ({
   el: "#root",
   data: {
+    logoImage: "https://www.boolean.careers/images/misc/logo.png",
     newItem: "",
     items: [
       "Fare i compiti",
