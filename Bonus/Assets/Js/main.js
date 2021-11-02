@@ -82,6 +82,11 @@ const app = new Vue ({
       this.items.push(this.listTrashedItems[i])
       this.listTrashedItems.splice(i, 1);
 
+    },
+    emptyItems() {
+       this.listTrashedItems = [];
+     
+       
     }
 
 

@@ -68,3 +68,12 @@ i {
   display: flex;
   justify-content: space-between;
 }
+.delete {
+  display: flex;
+}
+.delete > p {
+  color: red;
+  margin-left: 0.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
