@@ -31,25 +31,23 @@ const app = new Vue ({
       "Fare il bucato"
     ],
     error: false,
-    modify: false
+    modify: false,
+    listCompletedItems: []
    
   },
   methods: {
     removeItem(i) {
       this.items.splice(i, 1)
-      //this.completed = false
+
     },
     completedItems(i) {
-      this.items.splice(i, 1, "Item completato");
+    
+      this.muoveCompleteItems(i)
+       this.items.splice(i, 1);
       
-      
-      /* if(this.items.length == 0) {
-        this.completed = false
-        
-      } */
     },
     addItem() {
-      //console.log("cliccato su aggiungi");
+
       if(this.newItem.length > 5) {
                 this.items.push(this.newItem)
                 this.error = false;
@@ -59,11 +57,15 @@ const app = new Vue ({
             }
             
             this.newItem = ""
-           // this.completed = false
     },
     modifyItem(i) {
       this.items.pop(i)
       this.modify = true
+    },
+    muoveCompleteItems(i) {
+     
+      this.listCompletedItems.push(this.items[i])
+      console.log(this.listCompletedItems);
     }
 
 

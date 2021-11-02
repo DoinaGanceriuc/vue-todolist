@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: 400px;
+  width: 700px;
   margin: 5rem auto;
 }
 .logo {
@@ -18,16 +18,24 @@ input,
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
 }
-.addItems,
-.item {
+input {
+  margin-right: 1rem;
+}
+.error {
+  padding-top: 0.5rem;
+}
+.list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .addItems {
   padding: 1.5rem 2rem;
+  text-align: center;
 }
 .item {
+  display: flex;
+  justify-content: space-between;
   line-height: 2rem;
   border-bottom: 1px solid #dadee1;
 }
@@ -37,7 +45,20 @@ input,
   padding: 2rem;
   border-radius: 0.5rem;
 }
+h4 {
+  padding-bottom: 1rem;
+}
+.icons {
+  margin-left: 2rem;
+}
 
 i {
   padding: 0.5rem;
+}
+
+.completed {
+  background-color: #f5f7f7;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
 }

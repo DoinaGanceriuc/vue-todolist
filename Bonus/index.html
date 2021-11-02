@@ -24,34 +24,50 @@
                     <button class="btn_add" @click="addItem">Aggiungi</button>
                     <div class="error" v-show="error">Devi scrivere qualcosa</div>
                 </div>
+                <div class="list">
+
+                    <div class="container_items">
+
+                        <div class="items" v-if="items.length> 0">
+                            <h4>Todo List</h4>
+
+                            <div class="item" v-for="(item, index) in items">
+                                <p>{{item}}</p>
+                                <div class="icons">
+                                    <i class="fas fa-pencil-alt"
+                                        @click="modifyItem(index)"></i>
+                                    <i class="fas fa-check"
+                                        @click="completedItems(index)"></i>
+                                    <i class="fas fa-times"
+                                        @click="removeItem(index)"></i>
+                                </div>
+                            </div>
+                            <div class="modify" v-show="modify">
+                                <input type="text" placeholder=""
+                                    v-model="newItem"
+                                    @keyup.enter="addItem">
+                            </div>
 
 
-                <div class="items" v-if="items.length> 0">
-
-                    <div class="item" v-for="(item, index) in items">
-                        <p>{{item}}</p>
-                        <div class="icons">
-                            <i class="fas fa-pencil-alt"
-                                @click="modifyItem(index)"></i>
-                            <i class="fas fa-check"
-                                @click="completedItems(index)"></i>
-                            <i class="fas fa-times" @click="removeItem(index)"></i>
                         </div>
-                        <!-- <div class="completed" v-show="completed">
-                            <p>Item completato</p>
-                        </div> -->
+                        <div class="items" v-else>
+                            <p>Niente altro da fare</p>
+                        </div>
                     </div>
-                    <div class="modify" v-show="modify">
-                        <input type="text" placeholder=""
-                            v-model="newItem"
-                            @keyup.enter="addItem">
+                    <div class="completed">
+                        <h4>Completed</h4>
+                        <div class="single_completed_item" v-for="(itemComplete,
+                            index) in
+                            listCompletedItems">
+
+                            <p>{{itemComplete}}</p>
+                        </div>
                     </div>
+                </div>
 
 
-                </div>
-                <div class="items" v-else>
-                    <p>Niente altro da fare</p>
-                </div>
+
+
             </div>
 
         </div>
