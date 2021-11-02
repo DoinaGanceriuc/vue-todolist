@@ -61,6 +61,18 @@
                             listCompletedItems">
 
                             <p>{{itemComplete}}</p>
+                            <i class="fas fa-undo" @click="backItems(index)"></i>
+                        </div>
+                    </div>
+                    <div class="trashed">
+                        <h4>Trashed</h4>
+                        <div class="single_trashed_item" v-for="(itemTrashed,
+                            index) in
+                            listTrashedItems">
+
+                            <p>{{itemTrashed}}</p>
+                            <i class="fas fa-trash-restore"
+                                @click="backDeletedItems(index)"></i>
                         </div>
                     </div>
                 </div>

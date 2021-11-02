@@ -32,11 +32,13 @@ const app = new Vue ({
     ],
     error: false,
     modify: false,
-    listCompletedItems: []
+    listCompletedItems: [],
+    listTrashedItems: []
    
   },
   methods: {
     removeItem(i) {
+      this.muoveTrashedItems(i)
       this.items.splice(i, 1)
 
     },
@@ -66,6 +68,20 @@ const app = new Vue ({
      
       this.listCompletedItems.push(this.items[i])
       console.log(this.listCompletedItems);
+    },
+    backItems(i) {
+      this.items.push(this.listCompletedItems[i])
+      this.listCompletedItems.splice(i, 1);
+    },
+    muoveTrashedItems(i) {
+     
+      this.listTrashedItems.push(this.items[i])
+      console.log(this.listTrashedItems);
+    },
+    backDeletedItems(i) {
+      this.items.push(this.listTrashedItems[i])
+      this.listTrashedItems.splice(i, 1);
+
     }
 
 

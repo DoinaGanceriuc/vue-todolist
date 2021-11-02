@@ -53,12 +53,18 @@ h4 {
 }
 
 i {
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 
-.completed {
+.completed,
+.trashed {
   background-color: #f5f7f7;
   padding: 2rem;
   border-radius: 0.5rem;
   margin-left: 1rem;
+}
+.single_completed_item,
+.single_trashed_item {
+  display: flex;
+  justify-content: space-between;
 }
