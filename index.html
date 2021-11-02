@@ -14,21 +14,34 @@
     <body>
         <div id="root">
             <div class="addItems">
-                <input type="text" placeholder="Nuovo todo" v-model="newItem">
+                <input type="text" placeholder="Nuovo todo" v-model="newItem"
+                    @keyup.enter="addItem">
                 <button class="btn_add" @click="addItem">Aggiungi</button>
+                <div class="error" v-show="error">Devi scrivere qualcosa</div>
             </div>
 
 
-            <div class="items">
+            <div class="items" v-if="items.length> 0">
+
                 <div class="item" v-for="(item, index) in items">
                     <p>{{item}}</p>
                     <div class="icons">
                         <i class="fas fa-check" @click="completedItems(index)"></i>
                         <i class="fas fa-times" @click="removeItem(index)"></i>
                     </div>
-
                 </div>
+                <div class="completed" v-show="completed">
+                    <p>Item completato</p>
+                </div>
+
             </div>
+            <div v-else>
+                <p>Niente altro da fare</p>
+            </div>
+
+
+
+
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
